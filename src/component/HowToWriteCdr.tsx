@@ -363,10 +363,10 @@ const onSubmit = async () => {
             <button
               type="submit"
               disabled={anyEmpty}
-              className={`mt-4 mb-5 px-6 py-2 rounded w-full text-white ${
+              className={`mt-4 mb-5 px-6 py-2 rounded w-full text-white bg-[#3B4CEE] ${
                 anyEmpty
-                  ? 'bg-[#8BD883] cursor-not-allowed'
-                  : 'bg-[#43B138] cursor-pointer'
+                  ? 'opacity-50 cursor-not-allowed'
+                  : ' cursor-pointer'
               }`}
             >
               Pay | AUD {amount}
