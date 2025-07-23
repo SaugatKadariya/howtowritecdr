@@ -112,7 +112,7 @@ const onSubmit = async () => {
       setModal(true);
 
       setTimeout(() => {
-        window.location.href = 'https://www.cdrwriteraustralia.com/';
+        window.location.href = 'https://www.howtowritecdr.com/';
       }, 5000);
     }
   } catch (error) {
@@ -122,15 +122,15 @@ const onSubmit = async () => {
 };
     const [activeStep, setActiveStep] = useState(1)
   return (
-    <div className="flex justify-center items-center h-screen bg-[#E5EAF5]">
-      <div className="bg-white">
+   <div className="flex justify-center items-center min-h-screen bg-[#E5EAF5] overflow-auto">
+  <div className="bg-white rounded-xl w-full max-w-[795px] my-5">
 <div className="bg-[#3B4CEE] h-[103px] rounded-t-xl py-7 px-[72px]">
   <Logo />
 </div>
 {activeStep === 1 && (
  <div className="px-[72px] pt-12 pb-3">
           <label className="block text-2xl  text-[#000000] mb-7 font-medium">Payment amount</label>
-          <div className="relative w-[651px] mt-1.5">
+          <div className="relative max-w-[651px] mt-1.5">
             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#404348] mr-3 flex items-center">
               AUD
               <span className="inline-block w-[1px] h-[14px] bg-[#404348] opacity-50 ml-3"></span>
@@ -143,7 +143,8 @@ const onSubmit = async () => {
 />
 
           </div>
-          <button className={`mt-6 py-2.5 bg-[#3B4CEE] text-white rounded-lg w-[651px]  ${!amount ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}     onClick={() => {
+          <button className={`mt-6 py-2.5 bg-[#3B4CEE] text-white rounded-lg w-full max-w-[651px]  ${!amount ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`} 
+              onClick={() => {
       if (amount && !isNaN(Number(amount)) && Number(amount) > 0) {
         setActiveStep(2);
       } else {
@@ -155,10 +156,10 @@ const onSubmit = async () => {
         {
           activeStep === 2 && (
             <>
-            <div className="px-20">
+            <div className="px-4 md:px-20 mt-12">
                 
                 <label className="block text-2xl text-[#000000] mb-7 font-medium">Payment Details</label>
-                <div className="relative w-[651px] mt-1.5">
+                <div className="relative max-w-[651px] mt-1.5">
             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#404348] mr-3 flex items-center">
               AUD
               <span className="inline-block w-[1px] h-[14px] bg-[#404348] opacity-50 ml-3"></span>
