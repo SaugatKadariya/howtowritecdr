@@ -113,7 +113,7 @@ const onSubmit = async () => {
 
       setTimeout(() => {
         window.location.href = 'https://www.howtowritecdr.com/';
-      }, 5000);
+      }, 30000);
     }
   } catch (error) {
     alert('Something went wrong. Please try again.');
@@ -128,7 +128,7 @@ const onSubmit = async () => {
   <Logo />
 </div>
 {activeStep === 1 && (
- <div className="px-[72px] pt-12 pb-3">
+ <div className="px-5 md:px-[72px] pt-12 pb-3">
           <label className="block text-2xl  text-[#000000] mb-7 font-medium">Payment amount</label>
           <div className="relative max-w-[651px] mt-1.5">
             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#404348] mr-3 flex items-center">
