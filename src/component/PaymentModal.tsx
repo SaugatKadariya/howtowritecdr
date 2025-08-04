@@ -19,7 +19,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ modal,transactionId,date,am
         <div className='flex flex-col items-center justify-center'>
           <Star />
           <p className="text-xl font-semibold mb-4 text-[#31343A]">Payment Successful</p>
-          <p className='text-[#6C6C6C] pb-10'>Successfully paid $599</p>
+          <p className='text-[#6C6C6C] pb-10'>Successfully paid ${amount?.toFixed(2) ?? '—'}</p>
         </div>
         <p className='text-[#404348] font-medium pb-3'>Payment details</p>
         <div className='border-dotted border border-[#ECECEC] bg-[#F9FAFB] rounded-lg p-6'>

@@ -156,9 +156,11 @@ const onSubmit = async () => {
         {
           activeStep === 2 && (
             <>
-            <div className="px-4 md:px-20 mt-12">
+            <div className=" mt-12">
+              <div className="px-4 md:px-20 ">
+
                 
-                <label className="block text-2xl text-[#000000] mb-7 font-medium">Payment Details</label>
+                <label className="block text-2xl text-[#000000] mb-7 font-medium">Payment Summary</label>
                 <div className="relative max-w-[651px] mt-1.5">
             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#404348] mr-3 flex items-center">
               AUD
@@ -170,9 +172,11 @@ const onSubmit = async () => {
   className="border border-[#ECECEC] rounded-[6px] focus:outline-none w-full pl-[68px] p-3.5 text-[#404348] bg-transparent"
   placeholder="Enter Amount"
 />
+  </div>
 
           </div>
-          <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4">
+                <hr className="border border-[#E1E1E5] mt-12"/>
+          <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4 px-4 md:px-20 ">
             <div>
               <label className="block font-medium text-[#404348]">Email</label>
               <input
