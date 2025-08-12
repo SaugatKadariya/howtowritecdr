@@ -100,11 +100,11 @@ const onSubmit = async () => {
         body: JSON.stringify({ intentId: result.paymentIntent.id }),
       });
 
-      const { id, created, payment_method_types } = result.paymentIntent;
+      const { id, payment_method_types } = result.paymentIntent;
 
       setModalData({
         transactionId: id,
-        date: new Date(created * 1000).toLocaleDateString(),
+        date: new Date().toLocaleDateString(),
         amount: numericAmount,
         paymentMethod: payment_method_types[0],
       });
